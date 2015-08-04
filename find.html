@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var myArray=[
+                ['A','女',21,'大一'],
+                ['E','男',22,'大二'],
+                ['R','男',24,'大四'],
+                ['G','女',23,'大三'],
+                ['H','女',24,'大三'],
+                ['I','女',21,'大一'],
+        ];
+        for(var i=0;i<myArray.length;i++){
+            if((myArray[i][3]=="大一")&&(myArray[i][1]=="女")){
+                    document.write(myArray[i][0]+"<br/>");
+            }
+        }
+    </script>
+</body>
+</html>
