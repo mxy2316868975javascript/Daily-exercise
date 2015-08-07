@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1 id="icon">JS势在必得，一定可以拿下的，估计是这个暑假主要任务了，虽然很难，但是这个拿下其他都不是问题</h1>
+
+<div id="txt">
+    <h3>JS为网页添加动态效果并实现交互功能</h3>
+
+    <p>1.JS入门篇，让你快速了解JS</p>
+
+    <p>2.JS进阶篇，掌握JS的基础语法，函数，数组，事件，内置对象，BOM浏览器，DOM操作。</p>
+
+    <p>3.学完以上两门基础课后，再深入学习JS的变量作用域，事件，对象，运动，cookie，正则表达式，ajax等课程</p>
+</div>
+<form>
+    <input type="button" onclick="cgColor()" value="改变颜色">
+    <input type="button" onclick="cgWH()" value="改变宽高">
+    <input type="button" onclick="display()" value="显示内容">
+    <input type="button" onclick="displayY()" value="隐藏内容">
+    <input type="button" onclick="confirm()" value="是否取消设置">
+</form>
+<script>
+    function cgColor() {
+        var myColor = document.getElementById("txt");
+        myColor.style.color = "red";
+        myColor.style.backgroundColor = "black";
+    }
+    function cgWH() {
+        var myWH = document.getElementById("txt");
+        myWH.style.height = "400px";
+        myWH.style.width = "600px";
+    }
+    function displayY() {
+        var myD = document.getElementById("icon");
+        myD.style.display = "none";
+    }
+    function display() {
+        var myP = document.getElementById("icon");
+        myP.style.display = "block";
+    }
+    function confirm() {
+        var mySet = confirm("是否取消设置？");
+        if (mySet = true) {
+
+        }
+    }
+</script>
+</body>
+</html>
