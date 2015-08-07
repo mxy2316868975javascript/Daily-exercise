@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var myDate=new Date();
+        var weekday=["周日","周一","周二","周三","周四","周五","周六"];
+        var myNum=myDate.getDay();
+        var myStr="小明：43;小张：89;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+        var myStr2=myStr.split(";");
+       // document.write(myStr2);测试
+        var sum=0;
+        var avg=0;
+        for(var i=0;i<myStr2.length;i++) {
+            sum+=parseInt(myStr2[i].slice(3, 5));
+        }
+        //document.write(sum+"<br/>");测试
+        avg = parseInt(sum / myStr2.length);
+        document.write(myDate.getFullYear()+"年"+(myDate.getMonth()+1)+"月"+myDate.getDate()+"日"+"&nbsp"+weekday[myNum]+"&nbsp"+"班级平均分为："+avg);
+    </script>
+</body>
+</html>
