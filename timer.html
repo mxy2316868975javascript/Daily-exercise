@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function myOpen(){
+            alert("欢迎来到这里");
+            window.open('http://www.imooc.com','_blank','width=400px height=600px');
+        }
+    </script>
+    <input type="text" value="点击我" onclick="myOpen()">
+<hr>
+    <script>
+        var atttime;
+        function clock(){
+            var time=new Date();
+            atttime=time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
+            document.getElementById("clock").value=atttime;
+        }
+        var int=setInterval(clock,1000);
+    </script>
+    <input type="text" id="clock" onclick="clock()">
+<hr>
+    <script>
+        function clock1(){
+            var time1=new Date();
+            document.getElementById("clock1").value=time1;
+        }
+        var int=setInterval(clock1,1000);
+    </script>
+        <input type="text" id="clock1" size="50">//size这里没搞懂？
+        <input type="button" value="stop" onclick="clearInterval(int)">
+    </body>
+<hr>
+    <script>
+        var num2=0;
+        function keep(){
+            document.getElementById('count').value=num2;
+            num2=num2+1;
+            setTimeout(keep,500);
+            //setTimeout("alert('hello')",3000);
+        }
+        setTimeout(keep,1000);
+    </script>
+    <input type="text" id="count">
+    <input type="button" value="start" onclick="keep()">
+<hr>
+    <script>
+        var num=0;
+        var i;
+        function startCount(){
+            document.getElementById("count1").value=num;
+            num=num+1;
+            i=setTimeout(startCount,100);
+        }
+            setTimeout(startCount,100);
+        function stopCount(){
+            clearTimeout(i);
+        }
+    </script>
+    <input type="text" id="count1">
+    <input type="button" value="start" onclick="startCount()">
+    <input type="button" value="stop" onclick="stopCount()">
+</html>
