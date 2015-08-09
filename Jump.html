@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <p>操作成功</p>
+    <p><span id="time">5</span>秒后回到主页<a href="javascript:goBack()">返回</a></p>
+
+    <script>
+        var num=document.getElementById("time").innerHTML;
+        function change(){
+            num--;
+            document.getElementById("time").innerHTML=num;
+            if(num==0){
+                location.assign("http://www.imooc.com");
+            }
+        }
+        setInterval(change,1000);
+        function goBack(){
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
